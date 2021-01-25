@@ -40,8 +40,8 @@ api.add_resource(Artists, '/artists/<string:artist>')
 import spotify
 
 
-spotify_client_id = 'c10efd7ac96241a0a56515e2e5297c84'
-spotify_client_secret = '183d5e5e1754435ebfbb8eb40a96a723'
+spotify_client_id = '..c10efd...e2e52...'
+spotify_client_secret = '..183...bfbb8eb40a9...23'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
