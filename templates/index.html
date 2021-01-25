@@ -1,0 +1,44 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<div class="text-center">
+  <h1>Buenas! </h1>
+  <h2>Buscá un artista en Spotify!!</h2>
+</div>
+
+<br>
+
+<form action="/" method="POST">
+  <div class="form-group">
+    <input name="artist" class="form-control input-lg" type="text" placeholder="Enter an artist">
+  </div>
+  <input type="submit" class="btn btn-primary btn-lg btn-block" value="Buscar">
+</form>
+
+<br>
+<hr>
+
+<div>
+  {% for a in artists.resultados %}
+    <div class="well"> 
+    <div class="row">   	
+    	<div class="col-sm-8">
+        <img src="{{a.image}}" class="artista">
+        <a href="{{a.href}}"><strong>{{a.name}}</strong></a>
+      </div>
+      <div class="col-sm-4">
+        {% if a.genres %}
+        <ul>
+          {% for g in a.genres %}
+          <li>{{g}}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+/* custom styles */
+
+.container {
+  max-width: 500px;
+}
+
+.artista{
+	height: 160px;
+	width:  160px;
+	border-radius: 50%;
+}
